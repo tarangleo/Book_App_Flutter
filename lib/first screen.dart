@@ -25,6 +25,7 @@ class fscreen extends StatelessWidget {
               ),
             ),
             Center(
+
               child: Container(
                 width: 400,
                 height: 400,
@@ -39,7 +40,7 @@ class fscreen extends StatelessWidget {
                           child: Image.asset('images/icon.png',width: 80,height:80,),
                         )),
                     CustomInputField(
-                        Icon(Icons.person, color: Colors.white), 'Username'),
+                        Icon(Icons.person, color: Colors.white), 'Email'),
                     CustomInputField(
                         Icon(Icons.lock, color: Colors.white), 'Password'),
                     Container(
@@ -49,6 +50,15 @@ class fscreen extends StatelessWidget {
                         child: Text('Login',style: TextStyle(
                             fontSize: 20.0
                         ),),),
+                    ),
+                    new Container(
+                      width: 150,
+                      child: RaisedButton(onPressed: (){},color: Colors.deepOrange,textColor: Colors.white,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Text('Register',style: TextStyle(
+                            fontSize: 20.0
+                        ),),),
+
                     )
                   ],
                 ),

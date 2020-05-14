@@ -1,5 +1,7 @@
+import 'package:bookappfinal/UI/bookspage.dart';
 import 'package:flutter/material.dart';
 import './UI/CustomInputField.dart';
+import 'main.dart';
 
 class login extends StatelessWidget {
   @override
@@ -45,7 +47,9 @@ class login extends StatelessWidget {
     Icon(Icons.lock, color: Colors.white), 'Password'),
     Container(
     width: 150,
-    child: RaisedButton(onPressed: (){},color: Colors.deepOrange,textColor: Colors.white,
+    child: RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return Main();
+    }));},color: Colors.deepOrange,textColor: Colors.white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
     child: Text('Login',style: TextStyle(
     fontSize: 25.0

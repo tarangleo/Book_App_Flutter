@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.redAccent,
       body:Center(
 
           child: RaisedButton(onPressed: () {

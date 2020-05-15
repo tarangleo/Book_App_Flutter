@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bookappfinal/login.dart';
 import 'package:bookappfinal/register.dart';
+import 'package:bookappfinal/placeorder.dart';
 
 
 
@@ -135,7 +136,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 120.0,
 
                       child: Center(
-    child: RaisedButton(onPressed: (){},color: Colors.green,textColor: Colors.white,
+    child: RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return PlaceOrder();
+    }));},color: Colors.green,textColor: Colors.white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
     child: Text('Checkout',style: TextStyle(
     fontSize: 20.0
@@ -155,6 +158,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildFoodItem(String imgPath, String foodName, String price) {
     return Padding(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+    child: InkWell(
+    onTap: () {
+    Navigator.of(context).push(MaterialPageRoute(
+    builder: (context) => PlaceOrder(heroTag: imgPath, foodName: foodName, foodPrice: price)
+    ));
+    },
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +212,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             )
-        );
+        )
+    );
 
   }
 }

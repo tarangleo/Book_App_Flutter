@@ -33,7 +33,7 @@ class _DetailsPageState extends State<PlaceOrder> {
           title: Text('Details',
               style: TextStyle(
                   fontFamily: 'Montserrat',
-                  fontSize: 18.0,
+                  fontSize: 30.0,
                   color: Colors.white)),
           centerTitle: true,
           actions: <Widget>[
@@ -83,7 +83,7 @@ class _DetailsPageState extends State<PlaceOrder> {
                     Text(widget.foodName,
                         style: TextStyle(
                             fontFamily: 'Montserrat',
-                            fontSize: 22.0,
+                            fontSize: 30.0,
                             fontWeight: FontWeight.bold)),
                     SizedBox(height: 20.0),
                     Row(
@@ -93,7 +93,8 @@ class _DetailsPageState extends State<PlaceOrder> {
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontSize: 20.0,
-                                color: Colors.grey)),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black)),
                         Container(height: 25.0, color: Colors.grey, width: 1.0),
                         Container(
                           width: 125.0,
@@ -121,7 +122,7 @@ class _DetailsPageState extends State<PlaceOrder> {
                                   ),
                                 ),
                               ),
-                              Text('2',
+                              Text('1',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'Montserrat',
@@ -154,13 +155,10 @@ class _DetailsPageState extends State<PlaceOrder> {
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: <Widget>[
-                            _buildInfoCard('WEIGHT', '300', 'G'),
+                            _buildInfoCard('Pages', '300', 'G'),
                             SizedBox(width: 10.0),
-                            _buildInfoCard('CALORIES', '267', 'CAL'),
-                            SizedBox(width: 10.0),
-                            _buildInfoCard('VITAMINS', 'A, B6', 'VIT'),
-                            SizedBox(width: 10.0),
-                            _buildInfoCard('AVAIL', 'NO', 'AV')
+                            _buildInfoCard('Font', 'classic', 'CAL'),
+                            
                           ],
                         )
                     ),
@@ -175,7 +173,7 @@ class _DetailsPageState extends State<PlaceOrder> {
                         height: 50.0,
                         child: Center(
                           child: Text(
-                              '\$52.00',
+                              widget.foodPrice,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Montserrat'

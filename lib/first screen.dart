@@ -17,7 +17,7 @@ class fscreen extends StatelessWidget {
 
                 Container(
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    width: 150,
+                    width: 180,
                   child: RaisedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return login();
@@ -25,13 +25,13 @@ class fscreen extends StatelessWidget {
           },color: Colors.deepOrange,textColor: Colors.white,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
             child: Text(' Login ',style: TextStyle(
-                fontSize: 35.0
+                fontSize: 45.0
             ),),),
 
         ),
           new Container(
             padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-          width: 185,
+          width: 220,
           child: RaisedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return register();
@@ -39,7 +39,7 @@ class fscreen extends StatelessWidget {
           },color: Colors.deepOrange,textColor: Colors.white,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
             child: Text('Register',style: TextStyle(
-                fontSize: 35.0
+                fontSize: 45.0
             ),),),
 
         )

@@ -158,7 +158,7 @@ class _DetailsPageState extends State<PlaceOrder> {
                             _buildInfoCard('Pages', '300', 'G'),
                             SizedBox(width: 10.0),
                             _buildInfoCard('Font', 'classic', 'CAL'),
-                            
+
                           ],
                         )
                     ),
